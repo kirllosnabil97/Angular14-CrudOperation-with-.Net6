@@ -1,0 +1,14 @@
+--create new angular project-- ng new projectname
+--run project-- ng serve --o
+-- open folder--  cd  folder-name
+--create new model-- ng g class shared/Employee --type=model
+--create new component--   ng g c component-name
+--create new service-- ng g s service-name
+
+-- INSTALL TOSTR LIBRARY--
+npm install ngx-toastr --save
+npm install @angular/animations --save
+---END INSTALL TOSTR LIBRARY--
+
+
+https://www.c-sharpcorner.com/learn/angular-8-in-10-days/
