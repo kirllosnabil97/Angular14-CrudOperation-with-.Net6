@@ -18,17 +18,17 @@ export class EmployeeService {
 designation:Designation=new Designation();
 
 saveEmployee(){
-  return this.myhttp.post('https://localhost:7218/api/Employee/CreateEmployee',this.employeeData);
+  return this.myhttp.post('https://localhost:7218/api/Employee',this.employeeData);
   //return this.myhttp.post('https://localhost:7218/swagger/index.html',this.employeeData);
 
 }
 updateEmployee()
   {
-    return this.myhttp.put(`${'https://localhost:7218/api/Employee/EditEmployee'}/${this.employeeData.id}` ,this.employeeData);
+    return this.myhttp.put(`${'https://localhost:7218/api/Employee'}/${this.employeeData.id}` ,this.employeeData);
   }
   getEmployees():Observable<Employee[]>
   {
-    return this.myhttp.get<Employee[]>('https://localhost:7218/api/Employee/GetEmployee');
+    return this.myhttp.get<Employee[]>('https://localhost:7218/api/Employee');
   }
   getDesignations():Observable<Designation[]>
   {
@@ -36,6 +36,6 @@ updateEmployee()
   }
   deleteEmployee(id:number)
   {
-    return this.myhttp.delete(`${'https://localhost:7218/api/Employee/DeleteEmployee'}/${id}`);
+    return this.myhttp.delete(`${'https://localhost:7218/api/Employee'}/${id}`);
   }
 }
